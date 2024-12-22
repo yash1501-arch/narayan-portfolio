@@ -24,7 +24,7 @@ const Home = () => {
           transition={{ duration: 0.5, delay: 0.2 }}
           className="text-xl md:text-2xl text-gray-600 mb-12"
         >
-          Front - End Developer | Flutter Developer | Tech Enthusiast
+          Front - End Developer | Full Stack Developer | Tech Enthusiast
         </motion.p>
 
         <motion.div
