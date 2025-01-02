@@ -23,7 +23,7 @@ const skills = [
 
 const Skills = () => {
   return (
-    <section id="skills" className="py-20 bg-gradient-to-br from-gray-50 to-white dark:from-gray-900 dark:to-gray-800 transition-colors duration-200">
+    <section id="skills" className="py-20 bg-gradient-to-bl from-primary via-accent to-highlight">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -32,8 +32,8 @@ const Skills = () => {
           transition={{ duration: 0.5 }}
           className="text-center mb-12"
         >
-          <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">Skills</h2>
-          <div className="w-20 h-1 bg-indigo-600 mx-auto"></div>
+          <h2 className="text-4xl font-bold text-white mb-4">Skills</h2>
+          <div className="w-20 h-1 bg-primary mx-auto"></div>
         </motion.div>
 
         <div className="grid md:grid-cols-2 gap-8">
@@ -63,7 +63,7 @@ const Skills = () => {
                 </div>
                 <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2.5 overflow-hidden">
                   <motion.div
-                    className="h-2.5 rounded-full bg-blue-500"
+                    className="h-2.5 rounded-full bg-primary"
                     initial={{ width: '0%' }}
                     whileInView={{ width: `${skill.level}%` }}
                     viewport={{ once: true }}

@@ -16,20 +16,20 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="fixed w-full bg-white/90 backdrop-blur-sm z-50 shadow-lg">
+    <nav className="fixed w-full bg-transparent backdrop-blur-sm z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
-            className="text-2xl font-bold text-indigo-600"
+            className="text-2xl font-bold text-white"
           >
             Portfolio
           </motion.div>
 
           {/* Desktop Navigation */}
           <div className="hidden md:block">
-            <div className="flex space-x-8">
+            <div className="flex space-x-6">
               {navItems.map((item) => (
                 <Link
                   key={item.name}
@@ -38,7 +38,7 @@ const Navbar = () => {
                   smooth={true}
                   offset={-64}
                   duration={500}
-                  className="cursor-pointer text-gray-600 hover:text-indigo-600 transition-colors px-3 py-2"
+                  className="cursor-pointer text-white hover:text-black transition-colors px-3 py-2"
                 >
                   {item.name}
                 </Link>
@@ -50,7 +50,7 @@ const Navbar = () => {
           <div className="md:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="text-gray-600 hover:text-indigo-600"
+              className="text-white hover:text-accent"
             >
               <Menu size={24} />
             </button>
@@ -74,7 +74,7 @@ const Navbar = () => {
                   offset={-64}
                   duration={500}
                   onClick={() => setIsOpen(false)}
-                  className="block px-3 py-2 text-gray-600 hover:text-indigo-600 transition-colors"
+                  className="block px-3 py-2 text-white hover:text-accent transition-colors"
                 >
                   {item.name}
                 </Link>
