@@ -59,8 +59,8 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-20 bg-primary">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="contact" className="py-20 bg-primary mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -68,13 +68,14 @@ const Contact = () => {
           transition={{ duration: 0.5 }}
           className="text-center mb-12"
         >
-          <h2 className="text-4xl font-bold text-white mb-4">Contact Me</h2>
+          <h2 className="text-4xl font-bold text-white mb-4">Contact</h2>
           <div className="w-20 h-1 bg-accent mx-auto"></div>
         </motion.div>
 
-        <div className="flex gap-12 items-start justify-between">
-          <div className="flex-1">
-            <div className="grid md:grid-cols-1 gap-8">
+        <div className="grid md:grid-cols-1 lg:grid-cols-2 gap-12 items-start justify-center">
+          {/* Contact Methods */}
+          <div className="flex-1 flex justify-center">
+            <div className="grid gap-8">
               {contactMethods.map((method, index) => (
                 <motion.div
                   key={method.title}
@@ -98,14 +99,15 @@ const Contact = () => {
             </div>
           </div>
 
+          {/* Contact Form */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.3 }}
-            className="flex-1 bg-white rounded-lg shadow-lg p-8"
+            className="flex-1 bg-white rounded-lg shadow-lg p-8 flex justify-center"
           >
-            <form ref={form} onSubmit={sendEmail} className="space-y-6">
+            <form ref={form} onSubmit={sendEmail} className="space-y-6 w-full max-w-lg">
               <div>
                 <label htmlFor="name" className="block text-sm font-medium text-gray-700">
                   Name
@@ -153,6 +155,7 @@ const Contact = () => {
           </motion.div>
         </div>
 
+        {/* Toast Notifications */}
         {isSent && (
           <motion.div
             className="fixed bottom-5 left-1/2 transform -translate-x-1/2 p-4 bg-green-500 text-white rounded-lg shadow-md flex items-center space-x-2"

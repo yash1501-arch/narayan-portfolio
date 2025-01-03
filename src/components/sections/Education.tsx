@@ -34,7 +34,7 @@ const Education = () => {
           transition={{ duration: 0.5 }}
           className="text-center mb-12"
         >
-          <h2 className="text-5xl font-extrabold text-white mb-4 animate-pulse">Education</h2>
+          <h2 className="text-4xl font-bold text-white mb-4 animate-pulse">Education</h2>
           <div className="w-20 h-1 bg-primary mx-auto mb-6"></div>
         </motion.div>
 
